@@ -28,8 +28,19 @@ Since Waffle will be setting cookies on response objects, you probably
 want it *below* any middleware that tweaks cookies before sending them
 out.
 
-If you're using South_, you can run ``manage.py migrate`` to create the
-necessary tables. If not, you'll need to create and run the schema
-migrations however you handle that.
+
+Requirements
+============
+
+Waffle supports the following versions of Django and Python:
+
+* **Django 1.4 (LTS)** - Python 2.6, 2.7
+* **Django 1.5** - Python 2.6, 2.7, 3.2, 3.3
+* **Django 1.6** - Python 2.6, 2.7, 3.2, 3.3
+* **Django 1.7** - Python 2.7, 3.2, 3.3, 3.4
+
+Waffle supports South_ for versions of Django before 1.7. You should
+upgrade to South 1.0 if at all possible. If not, you can use the
+```SOUTH_MIGRATION_MODULES`` <http://south.readthedocs.org/en/0.7.6/settings.html#south-migration-modules>`_
 
 .. _South: http://south.aeracode.org/
